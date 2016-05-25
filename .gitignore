@@ -1,5 +1,6 @@
 .setting
 ./target
 .gitignore
+.project
 
 
