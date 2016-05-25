@@ -1,3 +1,4 @@
 .setting
 ./target
-/dlg-separator-parser/.classpath
+.classpath
+
