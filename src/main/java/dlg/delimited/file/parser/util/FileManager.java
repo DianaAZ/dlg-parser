@@ -1,4 +1,4 @@
-package dlg.parser.util;
+package dlg.delimited.file.parser.util;
 
 import java.io.BufferedWriter;
 import java.io.ByteArrayOutputStream;

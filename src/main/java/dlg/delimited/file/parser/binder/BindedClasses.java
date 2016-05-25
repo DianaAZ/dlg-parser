@@ -1,4 +1,4 @@
-package dlg.parser.binder;
+package dlg.delimited.file.parser.binder;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;

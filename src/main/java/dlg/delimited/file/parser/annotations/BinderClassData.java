@@ -1,4 +1,4 @@
-package dlg.parser.annotations;
+package dlg.delimited.file.parser.annotations;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;

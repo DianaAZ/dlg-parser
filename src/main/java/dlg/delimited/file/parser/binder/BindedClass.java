@@ -1,4 +1,4 @@
-package dlg.parser.binder;
+package dlg.delimited.file.parser.binder;
 
 
 import java.lang.reflect.Field;
@@ -10,10 +10,10 @@ import java.util.Set;
 
 import org.apache.commons.lang3.StringUtils;
 
-import dlg.parser.annotations.BinderClassData;
-import dlg.parser.annotations.BinderClassData.Quoting;
-import dlg.parser.annotations.BindedFieldData;
-import dlg.parser.annotations.LineNumberField;
+import dlg.delimited.file.parser.annotations.BindedFieldData;
+import dlg.delimited.file.parser.annotations.BinderClassData;
+import dlg.delimited.file.parser.annotations.LineNumberField;
+import dlg.delimited.file.parser.annotations.BinderClassData.Quoting;
 
 
 @SuppressWarnings("rawtypes")
@@ -89,7 +89,7 @@ public class BindedClass {
 		this.clazz = clazz;
 		try {
 			BinderClassData annotation = (BinderClassData) this.clazz
-					.getAnnotation(dlg.parser.annotations.BinderClassData.class);
+					.getAnnotation(dlg.delimited.file.parser.annotations.BinderClassData.class);
 			this.naturalOrder = annotation.naturalOrder();
 			this.ignoreFirstLine = annotation.ignoreFirstRow();
 			this.trimFields = annotation.trimValue();
@@ -177,7 +177,7 @@ public class BindedClass {
 			String type = field.getType().getSimpleName();
 			if (this.lineNumberField == null) {
 				LineNumberField lineNumberAnnotation = field
-						.getAnnotation(dlg.parser.annotations.LineNumberField.class);
+						.getAnnotation(dlg.delimited.file.parser.annotations.LineNumberField.class);
 				if (lineNumberAnnotation != null) {
 					boolean isLineNumberField = lineNumberAnnotation.setLineNumber();
 					if (isLineNumberField && StringUtils.trimToNull(this.lineNumberField) == null
@@ -188,7 +188,7 @@ public class BindedClass {
 				}
 			}
 
-			BindedFieldData annotation = field.getAnnotation(dlg.parser.annotations.BindedFieldData.class);
+			BindedFieldData annotation = field.getAnnotation(dlg.delimited.file.parser.annotations.BindedFieldData.class);
 			if (annotation != null) {
 				if (!existingFields.containsValue(fieldName)) {
 					int position = annotation.readPosition();

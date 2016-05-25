@@ -1,4 +1,4 @@
-package dlg.parser;
+package dlg.delimited.file.parser;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -18,10 +18,10 @@ import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import dlg.parser.binder.BindedClass;
-import dlg.parser.binder.BindedClasses;
-import dlg.parser.exception.InvalidFieldValueException;
-import dlg.parser.util.DateFormatUtils;
+import dlg.delimited.file.parser.binder.BindedClass;
+import dlg.delimited.file.parser.binder.BindedClasses;
+import dlg.delimited.file.parser.exception.InvalidFieldValueException;
+import dlg.delimited.file.parser.util.DateFormatUtils;
 
 /**
  * 

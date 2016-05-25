@@ -1,4 +1,4 @@
-package dlg.parser.exception;
+package dlg.delimited.file.parser.exception;
 
 public class InvalidFieldValueException extends IllegalArgumentException {
 
